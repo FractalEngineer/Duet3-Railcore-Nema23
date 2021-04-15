@@ -126,7 +126,7 @@ M557 X5:255 Y5:290 P8:8 				; Sets mesh leveling probing area /!\ Accounts for p
 
 ; Fans
 M950 F0 C"out5"							; Hotend fan on "out5" connector
-M106 P0 H1 S0.81 T38 B0.3				; Enable thermostatic mode for hotend fan - 0.81 to compensate for 29.4V + 0.7 slice recommended to quiet it down
+M106 P0 H1 S0.81 T35 B0.3				; Enable thermostatic mode for hotend fan - 0.81 to compensate for 29.4V + 0.7 slice recommended to quiet it down
 M950 F1 C"out4"							; Layer fan on "out4" connector
 M106 P1 S0 								; Layer Fan
 

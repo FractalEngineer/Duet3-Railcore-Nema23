@@ -1,0 +1,1 @@
+M906 X{2800 * 0.30} Y{2800 * 0.30} Z{1680 * 0.40} I30			; Set motor currents (mA) and motor idle factor 

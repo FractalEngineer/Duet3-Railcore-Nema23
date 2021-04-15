@@ -1,14 +1,16 @@
-
+; homez.g
+; called to home the Z axis
 
 G91
 ; Trinamic tuning
 G1 H2 Z0.0000625        ; 1 microstep movement to energize steppers
 G4 P150                 ; pause for <130ms
-G1 Z5 F800 H2
-G90
-G1 X150 Y150 F2400
-G30
-G1 Z2 F200
+
+G1 Z5 F800 H2			; lift Z relative to current position
+G90						; absolute positioning
+G1 X150 Y150 F6000		; go to first probe point
+G30						; home Z by probing the bed
+G1 Z2 F200				; lift Z a little off the bed
 
 
 ; homez.g

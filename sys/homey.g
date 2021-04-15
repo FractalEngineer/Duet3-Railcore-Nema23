@@ -4,15 +4,15 @@ G91
 ; Trinamic tuning
 G1 H2 Y-0.00625         ; 1 microstep movement to energize steppers
 G4 P150                 ; pause for <130ms
-G1 H2 Z0.0000625          ; 1 microstep movement to energize steppers
+G1 H2 Z0.0000625        ; 1 microstep movement to energize steppers
 G4 P150                 ; pause for <130ms
 
-G1 Z4 F200 H2		;_RRF3_ change S2 to H2
-G1 Y-305 F3000 H1	;_RRF3_ change S1 to H1
-G1 Y4 F600
-G1 Y-10 H1			;_RRF3_ change S1 to H1
-G1 Z-4 F200 H2		;_RRF3_ change S2 to H2
-G90
+G1 Z4 F200 H2		; lift Z relative to current position
+G1 Y-305 F6000 H1	; move quickly to Y axis endstop and stop there (first pass)
+G1 Y4 F600			; go back a few mm
+G1 Y-10 H1			; move slowly to Y axis endstop once more (second pass)
+G1 Z-4 F200 H2		; lower Z again
+G90					; absolute positioning
 
 
 
@@ -34,4 +34,4 @@ G90
 ;G1 Y5 F600       ; go back a few mm
 ;G1 H1 Y-10 F600   ; move slowly to Y axis endstop once more (second pass)
 ;G1 H2 Z-5 F6000   ; lower Z again
-;G90               ; absolute positioning
+;G90               

@@ -1,0 +1,7 @@
+M117 Start Extrusion Measurement.
+G1 X0 Y100 F6000
+M83
+G1 X100 E25 F60
+M400
+M591 D0; show measurement??
+M291 S3 R"Measure extrusion 25mm" P"Measure filament taken at 1mm/sec extrusion then press OK"
