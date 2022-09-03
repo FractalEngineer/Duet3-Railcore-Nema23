@@ -1,10 +1,10 @@
-; /sys/stop.g
+; /sys/cancel.g
 ; Clean up and shut down after a print
-; M0 in slicer to invoke
+; M25 in slicer to invoke
 
 M400                                        ; wait for moves to finish
-M104 S0                                     ; turn off temperature
-M140 S0                                     ; turn off heatbed
+;M104 S0                                     ; turn off temperature
+;M140 S0                                     ; turn off heatbed
 M107                                        ; turn off fan
 G1 E-3 F300									; retract 3 mm to reduce pressure in the nozzle
 G91
